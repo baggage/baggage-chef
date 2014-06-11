@@ -1,0 +1,10 @@
+name             'baggage'
+maintainer       'Fraser Scott'
+maintainer_email 'fraser.scott@gmail.com'
+license          'MIT'
+description      'Installs/Configures baggage'
+long_description 'Installs/Configures baggage'
+version          '0.1.0'
+
+depends 'git', '~> 4.0'
+depends 'sensu_spec', '~> 0.5'
