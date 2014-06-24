@@ -1,4 +1,4 @@
-include_recipe 'sensu_spec::definitions'
+include_recipe 'sensu_spec'
 
 describe 'baggage cli' do
   describe 'directory' do
@@ -9,5 +9,3 @@ describe 'baggage cli' do
     it "must have executable file /usr/bin/baggage"
   end
 end
-
-include_recipe 'sensu_spec::client'
