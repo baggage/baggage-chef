@@ -10,10 +10,10 @@ action :create do
     config_file = ".baggage-#{new_resource.desc}"
   end
 
-  config = [ "ID=#{new_resource.name}" ]
+  config = [ "BAGGAGE_ID=#{new_resource.name}" ]
 
-  config << "EMAIL_TOKEN=#{new_resource.email_token}" if new_resource.email_token
-  config << "ADMIN_TOKEN=#{new_resource.admin_token}" if new_resource.admin_token
+  config << "BAGGAGE_EMAIL_TOKEN=#{new_resource.email_token}" if new_resource.email_token
+  config << "BAGGAGE_ADMIN_TOKEN=#{new_resource.admin_token}" if new_resource.admin_token
 
   r = file ::File.join(user.dir, config_file) do
     owner user.uid
